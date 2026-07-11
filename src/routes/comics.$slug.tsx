@@ -9,7 +9,9 @@ export const Route = createFileRoute("/comics/$slug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Issue not found — Ember Peak" }, { name: "robots", content: "noindex" }] };
+      return {
+        meta: [{ title: "Issue not found — Ember Peak" }, { name: "robots", content: "noindex" }],
+      };
     }
     const { comic } = loaderData;
     return {
@@ -59,7 +61,10 @@ function IssuePage() {
       <div className="border-b-[3px] border-ink bg-cream">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:py-16 md:grid-cols-[1fr_1.2fr]">
           <div className="relative mx-auto w-full max-w-sm md:max-w-none">
-            <div className="absolute -left-3 -top-3 h-full w-full border-[3px] border-ink bg-ember" aria-hidden />
+            <div
+              className="absolute -left-3 -top-3 h-full w-full border-[3px] border-ink bg-ember"
+              aria-hidden
+            />
             <img
               src={comic.cover}
               alt={`Cover for ${comic.title}`}
@@ -70,15 +75,24 @@ function IssuePage() {
           </div>
           <div className="flex flex-col justify-center">
             <div className="flex flex-wrap items-center gap-2 font-display text-[10px] uppercase tracking-widest sm:text-xs">
-              <span className="border-[2px] border-ink bg-mustard px-2 py-0.5 text-ink">{comic.issue}</span>
-              <span className="text-muted-foreground">{comic.pages} pages · {comic.minutes} min read</span>
+              <span className="border-[2px] border-ink bg-mustard px-2 py-0.5 text-ink">
+                {comic.issue}
+              </span>
+              <span className="text-muted-foreground">
+                {comic.pages} pages · {comic.minutes} min read
+              </span>
             </div>
-            <h1 className="mt-4 font-display text-4xl leading-[1.02] text-ink sm:text-5xl md:text-6xl">{comic.title}</h1>
+            <h1 className="mt-4 font-display text-4xl leading-[1.02] text-ink sm:text-5xl md:text-6xl">
+              {comic.title}
+            </h1>
             <p className="mt-3 font-serif text-lg italic text-ember sm:text-xl">{comic.tagline}</p>
             <p className="mt-5 text-base text-foreground/80 sm:mt-6 sm:text-lg">{comic.synopsis}</p>
             <div className="mt-6 flex flex-wrap gap-2">
               {comic.themes.map((t: string) => (
-                <span key={t} className="border-[2px] border-ink bg-card px-3 py-1 text-[10px] uppercase tracking-wider sm:text-xs">
+                <span
+                  key={t}
+                  className="border-[2px] border-ink bg-card px-3 py-1 text-[10px] uppercase tracking-wider sm:text-xs"
+                >
                   {t}
                 </span>
               ))}
@@ -89,7 +103,9 @@ function IssuePage() {
 
       <section className="mx-auto grid max-w-5xl gap-10 px-4 py-20 md:grid-cols-[1fr_1.4fr]">
         <div>
-          <p className="font-display text-xs uppercase tracking-widest text-ember">What it leaves you with</p>
+          <p className="font-display text-xs uppercase tracking-widest text-ember">
+            What it leaves you with
+          </p>
           <h2 className="mt-2 font-display text-3xl text-ink">The lesson</h2>
         </div>
         <blockquote className="border-l-4 border-ember bg-cream p-6 font-serif text-2xl italic leading-snug text-ink">
@@ -105,7 +121,9 @@ function IssuePage() {
             { k: "Format", v: "Print + digital" },
           ].map((s) => (
             <div key={s.k} className="border-[3px] border-ink bg-card p-5 shadow-panel">
-              <p className="font-display text-xs uppercase tracking-widest text-muted-foreground">{s.k}</p>
+              <p className="font-display text-xs uppercase tracking-widest text-muted-foreground">
+                {s.k}
+              </p>
               <p className="mt-1 font-display text-3xl text-ink">{s.v}</p>
             </div>
           ))}
@@ -114,7 +132,9 @@ function IssuePage() {
 
       <section className="border-t-[3px] border-ink bg-ink text-cream">
         <div className="mx-auto max-w-7xl px-4 py-16">
-          <p className="font-display text-xs uppercase tracking-widest text-mustard">Keep reading</p>
+          <p className="font-display text-xs uppercase tracking-widest text-mustard">
+            Keep reading
+          </p>
           <h2 className="mt-2 font-display text-3xl text-cream">Other issues on the shelf</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
             {others.map((o) => (
@@ -133,8 +153,12 @@ function IssuePage() {
                   className="h-full w-full border-[2px] border-cream/30 object-cover"
                 />
                 <div className="min-w-0">
-                  <span className="font-display text-[10px] uppercase tracking-widest text-mustard">{o.issue}</span>
-                  <h3 className="mt-1 truncate font-display text-xl text-cream group-hover:text-ember">{o.title}</h3>
+                  <span className="font-display text-[10px] uppercase tracking-widest text-mustard">
+                    {o.issue}
+                  </span>
+                  <h3 className="mt-1 truncate font-display text-xl text-cream group-hover:text-ember">
+                    {o.title}
+                  </h3>
                   <p className="mt-1 line-clamp-2 text-sm text-cream/70">{o.tagline}</p>
                 </div>
               </Link>

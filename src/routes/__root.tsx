@@ -147,7 +147,10 @@ function SiteHeader() {
               to={l.to}
               activeOptions={{ exact: l.to === "/" }}
               className="px-3 py-1.5 font-display text-xs uppercase tracking-wider text-foreground transition-colors hover:text-ember"
-              activeProps={{ className: "px-3 py-1.5 font-display text-xs uppercase tracking-wider text-ember underline underline-offset-4" }}
+              activeProps={{
+                className:
+                  "px-3 py-1.5 font-display text-xs uppercase tracking-wider text-ember underline underline-offset-4",
+              }}
             >
               {l.label}
             </Link>
@@ -173,7 +176,10 @@ function SiteHeader() {
             to={l.to}
             activeOptions={{ exact: l.to === "/" }}
             className="px-3 py-1 font-display text-[10px] uppercase tracking-widest text-foreground/80 hover:text-ember"
-            activeProps={{ className: "px-3 py-1 font-display text-[10px] uppercase tracking-widest text-ember underline underline-offset-4" }}
+            activeProps={{
+              className:
+                "px-3 py-1 font-display text-[10px] uppercase tracking-widest text-ember underline underline-offset-4",
+            }}
           >
             {l.label}
           </Link>
@@ -195,22 +201,35 @@ function SiteFooter() {
             <span className="font-display text-lg">Ember Peak Comics</span>
           </div>
           <p className="mt-3 max-w-xs text-sm text-cream/70">
-            An independent comics studio publishing slow, honest stories for adult readers.
-            Printed on paper, drawn by hand, distributed with care.
+            An independent comics studio publishing slow, honest stories for adult readers. Printed
+            on paper, drawn by hand, distributed with care.
           </p>
         </div>
         <div>
           <p className="font-display text-xs uppercase tracking-widest text-mustard">Read</p>
           <ul className="mt-3 space-y-2 text-sm">
-            <li><Link to="/comics" className="hover:text-ember">All issues</Link></li>
-            <li><Link to="/" className="hover:text-ember">Newsstand</Link></li>
-            <li><Link to="/about" className="hover:text-ember">The studio</Link></li>
+            <li>
+              <Link to="/comics" className="hover:text-ember">
+                All issues
+              </Link>
+            </li>
+            <li>
+              <Link to="/" className="hover:text-ember">
+                Newsstand
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="hover:text-ember">
+                The studio
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
           <p className="font-display text-xs uppercase tracking-widest text-mustard">Studio</p>
           <p className="mt-3 text-sm text-cream/70">
-            Made in a small room above a bakery.<br />
+            Made in a small room above a bakery.
+            <br />
             Est. 2021. Reader-supported, ad-free.
           </p>
         </div>

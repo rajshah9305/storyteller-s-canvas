@@ -19,8 +19,8 @@ function ComicsIndex() {
         <p className="font-display text-xs uppercase tracking-widest text-ember">The shelf</p>
         <h1 className="mt-2 font-display text-5xl text-ink sm:text-6xl">Every issue, in order.</h1>
         <p className="mt-4 text-lg text-muted-foreground">
-          Three issues, published across two years. Each one stands alone, but they share a
-          quiet through-line: what it costs to keep caring.
+          Three issues, published across two years. Each one stands alone, but they share a quiet
+          through-line: what it costs to keep caring.
         </p>
       </header>
 
@@ -44,7 +44,9 @@ function ComicsIndex() {
             </div>
             <div className="flex flex-1 flex-col p-5">
               <div className="flex items-center justify-between font-display text-[10px] uppercase tracking-widest text-muted-foreground">
-                <span className="border-[2px] border-ink bg-mustard px-2 py-0.5 text-ink">{c.issue}</span>
+                <span className="border-[2px] border-ink bg-mustard px-2 py-0.5 text-ink">
+                  {c.issue}
+                </span>
                 <span>{c.minutes} min</span>
               </div>
               <h2 className="mt-3 font-display text-2xl text-ink">{c.title}</h2>
