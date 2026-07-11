@@ -57,8 +57,8 @@ function IssuePage() {
   return (
     <article>
       <div className="border-b-[3px] border-ink bg-cream">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-[1fr_1.2fr]">
-          <div className="relative">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:py-16 md:grid-cols-[1fr_1.2fr]">
+          <div className="relative mx-auto w-full max-w-sm md:max-w-none">
             <div className="absolute -left-3 -top-3 h-full w-full border-[3px] border-ink bg-ember" aria-hidden />
             <img
               src={comic.cover}
@@ -69,16 +69,16 @@ function IssuePage() {
             />
           </div>
           <div className="flex flex-col justify-center">
-            <div className="flex flex-wrap items-center gap-2 font-display text-xs uppercase tracking-widest">
+            <div className="flex flex-wrap items-center gap-2 font-display text-[10px] uppercase tracking-widest sm:text-xs">
               <span className="border-[2px] border-ink bg-mustard px-2 py-0.5 text-ink">{comic.issue}</span>
               <span className="text-muted-foreground">{comic.pages} pages · {comic.minutes} min read</span>
             </div>
-            <h1 className="mt-4 font-display text-5xl leading-[1.02] text-ink sm:text-6xl">{comic.title}</h1>
-            <p className="mt-3 font-serif text-xl italic text-ember">{comic.tagline}</p>
-            <p className="mt-6 text-lg text-foreground/80">{comic.synopsis}</p>
+            <h1 className="mt-4 font-display text-4xl leading-[1.02] text-ink sm:text-5xl md:text-6xl">{comic.title}</h1>
+            <p className="mt-3 font-serif text-lg italic text-ember sm:text-xl">{comic.tagline}</p>
+            <p className="mt-5 text-base text-foreground/80 sm:mt-6 sm:text-lg">{comic.synopsis}</p>
             <div className="mt-6 flex flex-wrap gap-2">
               {comic.themes.map((t: string) => (
-                <span key={t} className="border-[2px] border-ink bg-card px-3 py-1 text-xs uppercase tracking-wider">
+                <span key={t} className="border-[2px] border-ink bg-card px-3 py-1 text-[10px] uppercase tracking-wider sm:text-xs">
                   {t}
                 </span>
               ))}

@@ -44,30 +44,30 @@ function Index() {
 
       {/* Hero */}
       <section className="relative overflow-hidden border-b-[3px] border-ink">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-[1.05fr_1fr] md:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:py-16 md:grid-cols-[1.05fr_1fr] md:py-24">
           <div className="flex flex-col justify-center">
             <span className="inline-flex w-fit items-center gap-2 border-[3px] border-ink bg-cream px-3 py-1 font-display text-[10px] uppercase tracking-widest">
               <span className="h-2 w-2 rounded-full bg-ember" /> Issue No. 01 — Out now
             </span>
-            <h1 className="mt-6 font-display text-5xl leading-[0.95] text-ink sm:text-6xl md:text-7xl">
+            <h1 className="mt-5 font-display text-4xl leading-[1] text-ink sm:text-6xl md:text-7xl">
               Comics for grown-ups
               <span className="block text-ember">who still want to feel something.</span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-muted-foreground">
+            <p className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
               Ember Peak is a small studio publishing hand-inked graphic novels about grief,
               craft, memory, and the quiet weight of being a person. No capes. No franchises.
               Just stories that stay with you.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 to="/comics"
-                className="inline-flex items-center gap-2 border-[3px] border-ink bg-ember px-6 py-3 font-display text-sm uppercase tracking-wider text-primary-foreground shadow-panel transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 border-[3px] border-ink bg-ember px-5 py-3 font-display text-xs uppercase tracking-wider text-primary-foreground shadow-panel transition-transform hover:-translate-y-0.5 sm:px-6 sm:text-sm"
               >
                 Browse the shelf →
               </Link>
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 border-[3px] border-ink bg-card px-6 py-3 font-display text-sm uppercase tracking-wider text-ink shadow-panel transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 border-[3px] border-ink bg-card px-5 py-3 font-display text-xs uppercase tracking-wider text-ink shadow-panel transition-transform hover:-translate-y-0.5 sm:px-6 sm:text-sm"
               >
                 About the studio
               </Link>
@@ -75,22 +75,22 @@ function Index() {
 
             <dl className="mt-10 grid max-w-md grid-cols-3 gap-4 border-t-2 border-dashed border-ink/30 pt-6">
               <div>
-                <dt className="text-xs uppercase tracking-wider text-muted-foreground">Issues</dt>
-                <dd className="font-display text-2xl text-ink">03</dd>
+                <dt className="text-[10px] uppercase tracking-wider text-muted-foreground sm:text-xs">Issues</dt>
+                <dd className="font-display text-xl text-ink sm:text-2xl">03</dd>
               </div>
               <div>
-                <dt className="text-xs uppercase tracking-wider text-muted-foreground">Pages inked</dt>
-                <dd className="font-display text-2xl text-ink">216</dd>
+                <dt className="text-[10px] uppercase tracking-wider text-muted-foreground sm:text-xs">Pages inked</dt>
+                <dd className="font-display text-xl text-ink sm:text-2xl">216</dd>
               </div>
               <div>
-                <dt className="text-xs uppercase tracking-wider text-muted-foreground">Readers</dt>
-                <dd className="font-display text-2xl text-ink">4.2k</dd>
+                <dt className="text-[10px] uppercase tracking-wider text-muted-foreground sm:text-xs">Readers</dt>
+                <dd className="font-display text-xl text-ink sm:text-2xl">4.2k</dd>
               </div>
             </dl>
           </div>
 
-          <div className="relative">
-            <div className="absolute -left-4 -top-4 h-full w-full border-[3px] border-ink bg-moss" aria-hidden />
+          <div className="relative mt-4 md:mt-0">
+            <div className="absolute -left-3 -top-3 h-full w-full border-[3px] border-ink bg-moss sm:-left-4 sm:-top-4" aria-hidden />
             <img
               src={heroImg}
               alt="Cover art of Lantern of Dusk — a hooded traveler holding a glowing lantern on a windswept ridge at sunset"
@@ -98,7 +98,7 @@ function Index() {
               height={1200}
               className="relative block h-auto w-full border-[3px] border-ink object-cover"
             />
-            <div className="absolute -bottom-5 -right-5 border-[3px] border-ink bg-mustard px-4 py-2 font-display text-xs uppercase tracking-widest text-ink shadow-panel wiggle">
+            <div className="absolute -bottom-4 -right-3 border-[3px] border-ink bg-mustard px-3 py-1.5 font-display text-[10px] uppercase tracking-widest text-ink shadow-panel wiggle sm:-bottom-5 sm:-right-5 sm:px-4 sm:py-2 sm:text-xs">
               New this month
             </div>
           </div>
@@ -135,13 +135,13 @@ function Index() {
       </section>
 
       {/* Featured issue */}
-      <section className="mx-auto max-w-7xl px-4 py-20">
-        <div className="mb-10 flex items-end justify-between gap-4">
-          <div>
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:py-20">
+        <div className="mb-8 flex flex-wrap items-end justify-between gap-4 sm:mb-10">
+          <div className="min-w-0">
             <p className="font-display text-xs uppercase tracking-widest text-ember">Featured issue</p>
-            <h2 className="mt-2 font-display text-4xl text-ink sm:text-5xl">This month on the peak</h2>
+            <h2 className="mt-2 font-display text-3xl text-ink sm:text-5xl">This month on the peak</h2>
           </div>
-          <Link to="/comics" className="hidden font-display text-sm uppercase tracking-wider text-ink underline underline-offset-4 hover:text-ember sm:inline">
+          <Link to="/comics" className="font-display text-xs uppercase tracking-wider text-ink underline underline-offset-4 hover:text-ember sm:text-sm">
             See all issues →
           </Link>
         </div>
@@ -215,7 +215,7 @@ function Index() {
                 key={c.slug}
                 to="/comics/$slug"
                 params={{ slug: c.slug }}
-                className="group grid grid-cols-[minmax(0,0.9fr)_1.1fr] gap-5 border-[3px] border-ink bg-card p-5 shadow-panel transition-transform hover:-translate-y-1"
+                className="group grid grid-cols-[110px_minmax(0,1fr)] gap-4 border-[3px] border-ink bg-card p-4 shadow-panel transition-transform hover:-translate-y-1 sm:grid-cols-[minmax(0,0.9fr)_1.1fr] sm:gap-5 sm:p-5"
               >
                 <img
                   src={c.cover}
