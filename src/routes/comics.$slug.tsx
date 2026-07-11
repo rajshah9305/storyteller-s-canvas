@@ -77,7 +77,7 @@ function IssuePage() {
             <p className="mt-3 font-serif text-xl italic text-ember">{comic.tagline}</p>
             <p className="mt-6 text-lg text-foreground/80">{comic.synopsis}</p>
             <div className="mt-6 flex flex-wrap gap-2">
-              {comic.themes.map((t) => (
+              {comic.themes.map((t: string) => (
                 <span key={t} className="border-[2px] border-ink bg-card px-3 py-1 text-xs uppercase tracking-wider">
                   {t}
                 </span>
