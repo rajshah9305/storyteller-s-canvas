@@ -135,13 +135,13 @@ function Index() {
       </section>
 
       {/* Featured issue */}
-      <section className="mx-auto max-w-7xl px-4 py-20">
-        <div className="mb-10 flex items-end justify-between gap-4">
-          <div>
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:py-20">
+        <div className="mb-8 flex flex-wrap items-end justify-between gap-4 sm:mb-10">
+          <div className="min-w-0">
             <p className="font-display text-xs uppercase tracking-widest text-ember">Featured issue</p>
-            <h2 className="mt-2 font-display text-4xl text-ink sm:text-5xl">This month on the peak</h2>
+            <h2 className="mt-2 font-display text-3xl text-ink sm:text-5xl">This month on the peak</h2>
           </div>
-          <Link to="/comics" className="hidden font-display text-sm uppercase tracking-wider text-ink underline underline-offset-4 hover:text-ember sm:inline">
+          <Link to="/comics" className="font-display text-xs uppercase tracking-wider text-ink underline underline-offset-4 hover:text-ember sm:text-sm">
             See all issues →
           </Link>
         </div>
