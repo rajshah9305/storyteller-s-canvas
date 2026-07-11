@@ -215,7 +215,7 @@ function Index() {
                 key={c.slug}
                 to="/comics/$slug"
                 params={{ slug: c.slug }}
-                className="group grid grid-cols-[minmax(0,0.9fr)_1.1fr] gap-5 border-[3px] border-ink bg-card p-5 shadow-panel transition-transform hover:-translate-y-1"
+                className="group grid grid-cols-[110px_minmax(0,1fr)] gap-4 border-[3px] border-ink bg-card p-4 shadow-panel transition-transform hover:-translate-y-1 sm:grid-cols-[minmax(0,0.9fr)_1.1fr] sm:gap-5 sm:p-5"
               >
                 <img
                   src={c.cover}
