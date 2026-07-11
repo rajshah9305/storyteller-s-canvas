@@ -124,23 +124,24 @@ function RootShell({ children }: { children: ReactNode }) {
 }
 
 function SiteHeader() {
+  const links = [
+    { to: "/", label: "Newsstand" },
+    { to: "/comics", label: "Issues" },
+    { to: "/about", label: "Studio" },
+  ] as const;
   return (
     <header className="sticky top-0 z-40 border-b-[3px] border-ink bg-paper/95 backdrop-blur">
-      <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-3 sm:flex sm:justify-between">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3">
         <Link to="/" className="flex min-w-0 items-center gap-2">
           <span className="grid h-9 w-9 shrink-0 place-items-center border-[3px] border-ink bg-ember font-display text-primary-foreground">
             E
           </span>
-          <span className="truncate font-display text-lg leading-none">
+          <span className="truncate font-display text-base leading-none sm:text-lg">
             Ember Peak <span className="text-ember">Comics</span>
           </span>
         </Link>
-        <nav className="hidden items-center gap-1 sm:flex">
-          {[
-            { to: "/", label: "Newsstand" },
-            { to: "/comics", label: "Issues" },
-            { to: "/about", label: "Studio" },
-          ].map((l) => (
+        <nav className="hidden items-center gap-1 md:flex">
+          {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
@@ -158,7 +159,26 @@ function SiteHeader() {
             Read now
           </Link>
         </nav>
+        <Link
+          to="/comics"
+          className="shrink-0 border-[3px] border-ink bg-mustard px-3 py-1.5 font-display text-[10px] uppercase tracking-wider text-ink shadow-[3px_3px_0_0_var(--ink)] md:hidden"
+        >
+          Read
+        </Link>
       </div>
+      <nav className="flex items-center justify-center gap-1 border-t border-ink/15 bg-cream/60 px-2 py-1.5 md:hidden">
+        {links.map((l) => (
+          <Link
+            key={l.to}
+            to={l.to}
+            activeOptions={{ exact: l.to === "/" }}
+            className="px-3 py-1 font-display text-[10px] uppercase tracking-widest text-foreground/80 hover:text-ember"
+            activeProps={{ className: "px-3 py-1 font-display text-[10px] uppercase tracking-widest text-ember underline underline-offset-4" }}
+          >
+            {l.label}
+          </Link>
+        ))}
+      </nav>
     </header>
   );
 }
