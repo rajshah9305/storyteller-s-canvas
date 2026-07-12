@@ -190,6 +190,9 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   * {
     border-color: var(--color-border);
   }
@@ -198,6 +201,10 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  img {
+    content-visibility: auto;
   }
   h1,
   h2,
