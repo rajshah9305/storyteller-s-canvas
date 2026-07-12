@@ -12,6 +12,9 @@ export const Route = createFileRoute("/")({
           "Hand-inked graphic novels for grown-up readers. Slow, honest stories about grief, craft, memory and the small choices that reshape a life.",
       },
     ],
+    links: [
+      { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" },
+    ],
   }),
   component: Index,
 });
