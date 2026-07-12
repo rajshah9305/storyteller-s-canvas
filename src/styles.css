@@ -54,7 +54,7 @@
   --cream: oklch(0.93 0.04 82);
   --ember: oklch(0.63 0.19 42);
   --moss: oklch(0.42 0.08 145);
-  --mustard: oklch(0.80 0.15 82);
+  --mustard: oklch(0.8 0.15 82);
 
   --background: var(--paper);
   --foreground: var(--ink);
@@ -113,13 +113,22 @@
 }
 
 @keyframes ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes wiggle {
-  0%, 100% { transform: rotate(-1deg); }
-  50% { transform: rotate(1deg); }
+  0%,
+  100% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
 }
 
 @utility wiggle {
@@ -136,7 +145,10 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-display);
     letter-spacing: 0.01em;
   }

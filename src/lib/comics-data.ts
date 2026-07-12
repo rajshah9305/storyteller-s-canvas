@@ -28,8 +28,7 @@ export const COMICS: Comic[] = [
     cover: emberCover,
     synopsis:
       "When the forge fires of Kettle Hollow go cold overnight, apprentice smith Wren refuses to let the last living ember die on her watch. What starts as a stubborn vigil turns into a quiet reckoning with the mentor she buried, the town that forgot her, and the craft that still asks something of her.",
-    lesson:
-      "Keeping something alive is often lonelier than starting it. Do it anyway.",
+    lesson: "Keeping something alive is often lonelier than starting it. Do it anyway.",
     themes: ["Grief", "Craftsmanship", "Inheritance"],
   },
   {

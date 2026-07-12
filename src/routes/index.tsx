@@ -54,9 +54,9 @@ function Index() {
               <span className="block text-ember">who still want to feel something.</span>
             </h1>
             <p className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
-              Ember Peak is a small studio publishing hand-inked graphic novels about grief,
-              craft, memory, and the quiet weight of being a person. No capes. No franchises.
-              Just stories that stay with you.
+              Ember Peak is a small studio publishing hand-inked graphic novels about grief, craft,
+              memory, and the quiet weight of being a person. No capes. No franchises. Just stories
+              that stay with you.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
@@ -75,22 +75,31 @@ function Index() {
 
             <dl className="mt-10 grid max-w-md grid-cols-3 gap-4 border-t-2 border-dashed border-ink/30 pt-6">
               <div>
-                <dt className="text-[10px] uppercase tracking-wider text-muted-foreground sm:text-xs">Issues</dt>
+                <dt className="text-[10px] uppercase tracking-wider text-muted-foreground sm:text-xs">
+                  Issues
+                </dt>
                 <dd className="font-display text-xl text-ink sm:text-2xl">03</dd>
               </div>
               <div>
-                <dt className="text-[10px] uppercase tracking-wider text-muted-foreground sm:text-xs">Pages inked</dt>
+                <dt className="text-[10px] uppercase tracking-wider text-muted-foreground sm:text-xs">
+                  Pages inked
+                </dt>
                 <dd className="font-display text-xl text-ink sm:text-2xl">216</dd>
               </div>
               <div>
-                <dt className="text-[10px] uppercase tracking-wider text-muted-foreground sm:text-xs">Readers</dt>
+                <dt className="text-[10px] uppercase tracking-wider text-muted-foreground sm:text-xs">
+                  Readers
+                </dt>
                 <dd className="font-display text-xl text-ink sm:text-2xl">4.2k</dd>
               </div>
             </dl>
           </div>
 
           <div className="relative mt-4 md:mt-0">
-            <div className="absolute -left-3 -top-3 h-full w-full border-[3px] border-ink bg-moss sm:-left-4 sm:-top-4" aria-hidden />
+            <div
+              className="absolute -left-3 -top-3 h-full w-full border-[3px] border-ink bg-moss sm:-left-4 sm:-top-4"
+              aria-hidden
+            />
             <img
               src={heroImg}
               alt="Cover art of Lantern of Dusk — a hooded traveler holding a glowing lantern on a windswept ridge at sunset"
@@ -138,22 +147,28 @@ function Index() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:py-20">
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4 sm:mb-10">
           <div className="min-w-0">
-            <p className="font-display text-xs uppercase tracking-widest text-ember">Featured issue</p>
-            <h2 className="mt-2 font-display text-3xl text-ink sm:text-5xl">This month on the peak</h2>
+            <p className="font-display text-xs uppercase tracking-widest text-ember">
+              Featured issue
+            </p>
+            <h2 className="mt-2 font-display text-3xl text-ink sm:text-5xl">
+              This month on the peak
+            </h2>
           </div>
-          <Link to="/comics" className="font-display text-xs uppercase tracking-wider text-ink underline underline-offset-4 hover:text-ember sm:text-sm">
+          <Link
+            to="/comics"
+            className="font-display text-xs uppercase tracking-wider text-ink underline underline-offset-4 hover:text-ember sm:text-sm"
+          >
             See all issues →
           </Link>
         </div>
 
         <article className="grid gap-8 md:grid-cols-[1fr_1.25fr]">
-          <Link
-            to="/comics/$slug"
-            params={{ slug: featured.slug }}
-            className="group block"
-          >
+          <Link to="/comics/$slug" params={{ slug: featured.slug }} className="group block">
             <div className="relative">
-              <div className="absolute -left-3 -top-3 h-full w-full border-[3px] border-ink bg-ember transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1" aria-hidden />
+              <div
+                className="absolute -left-3 -top-3 h-full w-full border-[3px] border-ink bg-ember transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1"
+                aria-hidden
+              />
               <img
                 src={featured.cover}
                 alt={`Cover art for ${featured.title}`}
@@ -166,7 +181,9 @@ function Index() {
           </Link>
           <div className="flex flex-col justify-center">
             <div className="flex flex-wrap items-center gap-2 font-display text-xs uppercase tracking-widest text-muted-foreground">
-              <span className="border-[2px] border-ink bg-mustard px-2 py-0.5 text-ink">{featured.issue}</span>
+              <span className="border-[2px] border-ink bg-mustard px-2 py-0.5 text-ink">
+                {featured.issue}
+              </span>
               <span>{featured.pages} pages</span>
               <span>·</span>
               <span>{featured.minutes} min read</span>
@@ -206,7 +223,9 @@ function Index() {
       <section className="border-y-[3px] border-ink bg-cream halftone">
         <div className="mx-auto max-w-7xl bg-cream/90 px-4 py-20 backdrop-blur-sm">
           <div className="mb-10">
-            <p className="font-display text-xs uppercase tracking-widest text-ember">The catalogue</p>
+            <p className="font-display text-xs uppercase tracking-widest text-ember">
+              The catalogue
+            </p>
             <h2 className="mt-2 font-display text-4xl text-ink sm:text-5xl">More from the shelf</h2>
           </div>
           <div className="grid gap-8 md:grid-cols-2">
@@ -226,12 +245,17 @@ function Index() {
                   className="h-full w-full border-[3px] border-ink object-cover"
                 />
                 <div className="flex min-w-0 flex-col">
-                  <span className="font-display text-[10px] uppercase tracking-widest text-ember">{c.issue}</span>
+                  <span className="font-display text-[10px] uppercase tracking-widest text-ember">
+                    {c.issue}
+                  </span>
                   <h3 className="mt-1 truncate font-display text-2xl text-ink">{c.title}</h3>
                   <p className="mt-2 line-clamp-3 text-sm text-foreground/80">{c.synopsis}</p>
                   <div className="mt-auto flex flex-wrap gap-1 pt-3">
                     {c.themes.map((t) => (
-                      <span key={t} className="border border-ink/40 px-2 py-0.5 text-[10px] uppercase tracking-wider">
+                      <span
+                        key={t}
+                        className="border border-ink/40 px-2 py-0.5 text-[10px] uppercase tracking-wider"
+                      >
                         {t}
                       </span>
                     ))}
@@ -261,12 +285,15 @@ function Index() {
             if (typeof email === "string" && email.includes("@")) {
               form.reset();
               const status = form.querySelector("[data-status]") as HTMLElement | null;
-              if (status) status.textContent = `Thanks — we'll write to ${email} with the next issue.`;
+              if (status)
+                status.textContent = `Thanks — we'll write to ${email} with the next issue.`;
             }
           }}
           className="mx-auto mt-8 flex max-w-xl flex-col gap-3 sm:flex-row"
         >
-          <label htmlFor="email" className="sr-only">Email address</label>
+          <label htmlFor="email" className="sr-only">
+            Email address
+          </label>
           <input
             id="email"
             name="email"
