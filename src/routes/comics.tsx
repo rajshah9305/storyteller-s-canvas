@@ -14,11 +14,11 @@ function ComicsLayout() {
 
 function ComicsIndex() {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-16">
-      <header className="mb-12 max-w-3xl">
-        <p className="font-display text-xs uppercase tracking-widest text-ember">The shelf</p>
-        <h1 className="mt-2 font-display text-5xl text-ink sm:text-6xl">Every issue, in order.</h1>
-        <p className="mt-4 text-lg text-muted-foreground">
+    <div className="mx-auto max-w-7xl px-4 py-12 sm:py-16">
+      <header className="mb-10 max-w-3xl sm:mb-12">
+        <p className="rise font-display text-xs uppercase tracking-widest text-ember">The shelf</p>
+        <h1 className="rise-delay-1 mt-2 font-display text-4xl text-ink sm:text-5xl md:text-6xl">Every issue, in order.</h1>
+        <p className="rise-delay-2 mt-4 text-base text-muted-foreground sm:text-lg">
           Three issues, published across two years. Each one stands alone, but they share a quiet
           through-line: what it costs to keep caring.
         </p>
