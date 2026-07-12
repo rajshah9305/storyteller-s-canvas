@@ -23,12 +23,12 @@ function About() {
   return (
     <div>
       <section className="border-b-[3px] border-ink bg-cream halftone">
-        <div className="mx-auto max-w-4xl bg-cream/90 px-4 py-20 text-center">
-          <p className="font-display text-xs uppercase tracking-widest text-ember">The studio</p>
-          <h1 className="mt-3 font-display text-5xl leading-tight text-ink sm:text-6xl">
+        <div className="mx-auto max-w-4xl bg-cream/90 px-4 py-14 text-center sm:py-20">
+          <p className="rise font-display text-xs uppercase tracking-widest text-ember">The studio</p>
+          <h1 className="rise-delay-1 mt-3 font-display text-4xl leading-tight text-ink sm:text-5xl md:text-6xl">
             Two people, one drafting table, no rush.
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-foreground/80">
+          <p className="rise-delay-2 mx-auto mt-5 max-w-2xl text-base text-foreground/80 sm:text-lg">
             Ember Peak was founded above a bakery in 2021 by a writer and an inker who were tired of
             comics that treat adult readers like teenagers. We publish slowly on purpose, and only
             when we have something worth saying.

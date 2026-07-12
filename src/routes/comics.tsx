@@ -14,32 +14,33 @@ function ComicsLayout() {
 
 function ComicsIndex() {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-16">
-      <header className="mb-12 max-w-3xl">
-        <p className="font-display text-xs uppercase tracking-widest text-ember">The shelf</p>
-        <h1 className="mt-2 font-display text-5xl text-ink sm:text-6xl">Every issue, in order.</h1>
-        <p className="mt-4 text-lg text-muted-foreground">
+    <div className="mx-auto max-w-7xl px-4 py-12 sm:py-16">
+      <header className="mb-10 max-w-3xl sm:mb-12">
+        <p className="rise font-display text-xs uppercase tracking-widest text-ember">The shelf</p>
+        <h1 className="rise-delay-1 mt-2 font-display text-4xl text-ink sm:text-5xl md:text-6xl">Every issue, in order.</h1>
+        <p className="rise-delay-2 mt-4 text-base text-muted-foreground sm:text-lg">
           Three issues, published across two years. Each one stands alone, but they share a quiet
           through-line: what it costs to keep caring.
         </p>
       </header>
 
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {COMICS.map((c) => (
+        {COMICS.map((c, i) => (
           <Link
             key={c.slug}
             to="/comics/$slug"
             params={{ slug: c.slug }}
-            className="group flex flex-col border-[3px] border-ink bg-card shadow-panel transition-transform hover:-translate-y-1"
+            style={{ animationDelay: `${0.1 + i * 0.08}s` }}
+            className="rise group flex flex-col border-[3px] border-ink bg-card shadow-panel transition-all duration-300 hover:-translate-y-1 hover:shadow-panel-lg"
           >
-            <div className="border-b-[3px] border-ink">
+            <div className="overflow-hidden border-b-[3px] border-ink">
               <img
                 src={c.cover}
                 alt={`Cover for ${c.title}`}
                 width={1024}
                 height={1280}
-                loading="lazy"
-                className="block h-72 w-full object-cover"
+                loading="lazy" decoding="async"
+                className="block h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-72"
               />
             </div>
             <div className="flex flex-1 flex-col p-5">

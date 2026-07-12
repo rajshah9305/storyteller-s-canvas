@@ -149,7 +149,7 @@ function IssuePage() {
                   alt=""
                   width={1024}
                   height={1280}
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                   className="h-full w-full border-[2px] border-cream/30 object-cover"
                 />
                 <div className="min-w-0">
