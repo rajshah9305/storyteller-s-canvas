@@ -179,7 +179,7 @@ function Index() {
                 alt={`Cover art for ${featured.title}`}
                 width={1024}
                 height={1280}
-                loading="lazy"
+                loading="lazy" decoding="async"
                 className="relative block h-auto w-full border-[3px] border-ink object-cover"
               />
             </div>
@@ -246,7 +246,7 @@ function Index() {
                   alt={`Cover art for ${c.title}`}
                   width={1024}
                   height={1280}
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                   className="h-full w-full border-[3px] border-ink object-cover"
                 />
                 <div className="flex min-w-0 flex-col">

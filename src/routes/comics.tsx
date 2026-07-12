@@ -38,7 +38,7 @@ function ComicsIndex() {
                 alt={`Cover for ${c.title}`}
                 width={1024}
                 height={1280}
-                loading="lazy"
+                loading="lazy" decoding="async"
                 className="block h-72 w-full object-cover"
               />
             </div>
