@@ -47,36 +47,36 @@ function Index() {
 
       {/* Hero */}
       <section className="relative overflow-hidden border-b-[3px] border-ink">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:py-16 md:grid-cols-[1.05fr_1fr] md:py-24">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:gap-10 sm:py-16 md:grid-cols-[1.05fr_1fr] md:py-20 lg:py-24">
           <div className="flex flex-col justify-center">
-            <span className="inline-flex w-fit items-center gap-2 border-[3px] border-ink bg-cream px-3 py-1 font-display text-[10px] uppercase tracking-widest">
+            <span className="rise inline-flex w-fit items-center gap-2 border-[3px] border-ink bg-cream px-3 py-1 font-display text-[10px] uppercase tracking-widest">
               <span className="h-2 w-2 rounded-full bg-ember" /> Issue No. 01 — Out now
             </span>
-            <h1 className="mt-5 font-display text-4xl leading-[1] text-ink sm:text-6xl md:text-7xl">
+            <h1 className="rise-delay-1 mt-5 font-display text-[2.25rem] leading-[1] text-ink sm:text-6xl md:text-7xl">
               Comics for grown-ups
               <span className="block text-ember">who still want to feel something.</span>
             </h1>
-            <p className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
+            <p className="rise-delay-2 mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
               Ember Peak is a small studio publishing hand-inked graphic novels about grief, craft,
               memory, and the quiet weight of being a person. No capes. No franchises. Just stories
               that stay with you.
             </p>
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="rise-delay-3 mt-7 flex flex-wrap gap-3">
               <Link
                 to="/comics"
-                className="inline-flex items-center gap-2 border-[3px] border-ink bg-ember px-5 py-3 font-display text-xs uppercase tracking-wider text-primary-foreground shadow-panel transition-transform hover:-translate-y-0.5 sm:px-6 sm:text-sm"
+                className="inline-flex items-center gap-2 border-[3px] border-ink bg-ember px-5 py-3 font-display text-xs uppercase tracking-wider text-primary-foreground shadow-panel transition-all duration-200 hover:-translate-y-0.5 hover:shadow-panel-lg sm:px-6 sm:text-sm"
               >
                 Browse the shelf →
               </Link>
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 border-[3px] border-ink bg-card px-5 py-3 font-display text-xs uppercase tracking-wider text-ink shadow-panel transition-transform hover:-translate-y-0.5 sm:px-6 sm:text-sm"
+                className="inline-flex items-center gap-2 border-[3px] border-ink bg-card px-5 py-3 font-display text-xs uppercase tracking-wider text-ink shadow-panel transition-all duration-200 hover:-translate-y-0.5 hover:shadow-panel-lg sm:px-6 sm:text-sm"
               >
                 About the studio
               </Link>
             </div>
 
-            <dl className="mt-10 grid max-w-md grid-cols-3 gap-4 border-t-2 border-dashed border-ink/30 pt-6">
+            <dl className="rise-delay-3 mt-10 grid max-w-md grid-cols-3 gap-4 border-t-2 border-dashed border-ink/30 pt-6">
               <div>
                 <dt className="text-[10px] uppercase tracking-wider text-muted-foreground sm:text-xs">
                   Issues
@@ -98,9 +98,9 @@ function Index() {
             </dl>
           </div>
 
-          <div className="relative mt-4 md:mt-0">
+          <div className="fade-in relative mt-2 md:mt-0">
             <div
-              className="absolute -left-3 -top-3 h-full w-full border-[3px] border-ink bg-moss sm:-left-4 sm:-top-4"
+              className="absolute -left-3 -top-3 h-full w-full border-[3px] border-ink bg-moss transition-transform duration-500 sm:-left-4 sm:-top-4"
               aria-hidden
             />
             <img
@@ -108,6 +108,8 @@ function Index() {
               alt="Cover art of Lantern of Dusk — a hooded traveler holding a glowing lantern on a windswept ridge at sunset"
               width={1600}
               height={1200}
+              fetchPriority="high"
+              decoding="async"
               className="relative block h-auto w-full border-[3px] border-ink object-cover"
             />
             <div className="absolute -bottom-4 -right-3 border-[3px] border-ink bg-mustard px-3 py-1.5 font-display text-[10px] uppercase tracking-widest text-ink shadow-panel wiggle sm:-bottom-5 sm:-right-5 sm:px-4 sm:py-2 sm:text-xs">
