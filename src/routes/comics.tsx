@@ -25,21 +25,22 @@ function ComicsIndex() {
       </header>
 
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {COMICS.map((c) => (
+        {COMICS.map((c, i) => (
           <Link
             key={c.slug}
             to="/comics/$slug"
             params={{ slug: c.slug }}
-            className="group flex flex-col border-[3px] border-ink bg-card shadow-panel transition-transform hover:-translate-y-1"
+            style={{ animationDelay: `${0.1 + i * 0.08}s` }}
+            className="rise group flex flex-col border-[3px] border-ink bg-card shadow-panel transition-all duration-300 hover:-translate-y-1 hover:shadow-panel-lg"
           >
-            <div className="border-b-[3px] border-ink">
+            <div className="overflow-hidden border-b-[3px] border-ink">
               <img
                 src={c.cover}
                 alt={`Cover for ${c.title}`}
                 width={1024}
                 height={1280}
                 loading="lazy" decoding="async"
-                className="block h-72 w-full object-cover"
+                className="block h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-72"
               />
             </div>
             <div className="flex flex-1 flex-col p-5">
